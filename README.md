@@ -16,6 +16,8 @@ To edit a config.plist file use [ProperTree](https://github.com/corpnewt/ProperT
 
 To generate SMBIOS data use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
+To map your USB ports use [USBMap](https://github.com/corpnewt/USBMap).
+
 To better explore hardware information use [IORegistryExplorer](https://github.com/vulgo/IORegistryExplorer).
 
 To interact with an EFI partition with macOS, use the following commands.
