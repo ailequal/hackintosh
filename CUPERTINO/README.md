@@ -20,7 +20,8 @@
 - CPU: Intel Core i7-8700
 - CPU Cooler: Cooler Master Hyper H412R
 - iGPU: Intel UHD Graphics 630
-- RAM : Corsair Vengeance LPX DDR4 3000 MHz 8 GB X 4
+- GPU: Radeon RX 580
+- RAM: Corsair Vengeance LPX DDR4 3000 MHz 8 GB X 4
 - Storage 1: Samsung 850 EVO 250 GB (macOS 10.14.6)
 - Storage 2: Samsung 840 EVO 250 GB (Windows 10 Build 2004)
 - Storage 3: Seagate 1 TB 7200 RPM
@@ -37,7 +38,7 @@
 - Advanced/Chipset Configuration/Onboard WAN Device: Disabled
 - Advanced/Chipset Configuration/Vt-d: Disabled
 - Advanced/Chipset Configuration/IOAPIC 24-119 Entries: Enabled
-- Advanced/Chipset Configuration/Primary Graphics Adapter: Onboard
+- Advanced/Chipset Configuration/Primary Graphics Adapter: PCI Express
 - Advanced/Chipset Configuration/Share Memory: 128MB
 - Advanced/Chipset Configuration/IGPU Multi-Monitor: Enabled
 - Advanced/Storage Configuration/SATA_0/SATA Device Type: Solid State Drive
@@ -60,13 +61,13 @@
 
 ### opencore
 
-OpenCore 0.6.2 (RELEASE), which means all the debugging features are currenctly disabled.
+OpenCore 0.6.3 (RELEASE), which means all the debugging features are currenctly disabled.
 
 ### config.plist
 
-The SMBIOS is set to iMac18,1. It's the best one for this build: it's the last iMac with iGPU and it does recognize enough temperaturs sensors for me (I am using VirtualSMC) instead of the old FakeSMC (which actually recognize more sensors for my build, but it's quite old at this point). I tried iMac19,1 (the best choice from the main guide) but it wasn't that great in terms of sensors. There is also the iMac19,2 which has the exactly same CPU as mine (I haven't tested it yet).
+The SMBIOS is set to iMac19,1. I have a few sensors missing with VirtualSMC, but I overall it's working really great, so I don't mind.
 
-Under PciRoot(0x0)/Pci(0x2,0x0) there are two extra records that will fix a bug that will cause the HDMI port to display a purple/violet screen. These are the following needed for this board.
+If you are using the same motherboard without a descrete GPU, you could encounter a bug that will cause the HDMI port to display a purple/violet screen. To fix this weird behavior go under "PciRoot(0x0)/Pci(0x2,0x0)" and add these two extra records.
 
 | Label                   | Type | Data     |
 | ----------------------- | ---- | -------- |
@@ -81,7 +82,7 @@ A custom kext for USB mapping is included, so the XhciPortLimit is set to False.
 
 ### acpi
 
-Right now I am using the following Pre-Built SSDTs. I will sooner compile them manually.
+Right now I am using the following Pre-Built SSDTs. One day maybe I will compile them.
 
 * SSDT-AWAC.aml
 * SSDT-EC-USBX-DESKTOP.aml
@@ -94,14 +95,14 @@ Right now I am using the following Pre-Built SSDTs. I will sooner compile them m
 
 ### kext
 
-| Kext                                          | Version |
-| --------------------------------------------- | ------- |
-| Lilu                                          | 1.4.8   |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.1.7   |
-| AppleALC                                      | 1.5.3   |
-| IntelMausi                                    | 1.0.4   |
-| USBMap                                        | Custom  |
-| WhateverGreen                                 | 1.4.3   |
+| Kext                                          | Version  |
+| --------------------------------------------- | -------- |
+| Lilu                                          | 1.4.9    |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.1.8    |
+| AppleALC                                      | 1.5.4    |
+| IntelMausi                                    | 1.0.4    |
+| USBMap                                        | iMac19,1 |
+| WhateverGreen                                 | 1.4.4    |
 
 ### tools
 
@@ -109,7 +110,7 @@ Right now I am using the following Pre-Built SSDTs. I will sooner compile them m
 
 ### usb-mapping
 
-The USBMap.kext is custom made for my specific setup.
+The USBMap.kext is custom made for my specific setup and the iMac19,1 SMBIOS.
 
 ### to do
 

@@ -1,4 +1,0 @@
-# PHOENIX
-
-Hello world.
-

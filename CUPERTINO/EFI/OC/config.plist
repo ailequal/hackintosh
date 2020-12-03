@@ -147,7 +147,7 @@
 				<key>Address</key>
 				<integer>4278190080</integer>
 				<key>Comment</key>
-				<string>Generic: PCI root is a 0x1000 page memory region used by some firmwares</string>
+				<string>Generic: PCI root is a 0x1000 page memory region used by some types of firmware</string>
 				<key>Enabled</key>
 				<false/>
 			</dict>
@@ -202,15 +202,11 @@
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>BwCbPg==</data>
+				<data>AwCRPg==</data>
 				<key>framebuffer-patch-enable</key>
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
-				<key>framebuffer-con1-enable</key>
-				<data>AQAAAA==</data>
-				<key>framebuffer-con1-type</key>
-				<data>AAgAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -340,11 +336,11 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>ExecutablePath</key>
-				<string></string>
+				<string>Contents/MacOS/WhateverGreen</string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>USBMap.kext</string>
+				<string>WhateverGreen.kext</string>
 			</dict>
 			<dict>
 				<key>Comment</key>
@@ -358,11 +354,11 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>ExecutablePath</key>
-				<string>Contents/MacOS/WhateverGreen</string>
+				<string></string>
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>WhateverGreen.kext</string>
+				<string>USBMap.kext</string>
 			</dict>
 		</array>
 		<key>Block</key>
@@ -534,7 +530,7 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>Replace</key>
-				<data>MduKD4TJdQT/w7EKZrr9A+yoIHT7Zrr4A4jI7kj/x4XbdN/r/g==</data>
+				<data>MfaKD4TJdQT/xrEKZrr9A+yoIHT7Zrr4A4jI7kj/x4X2dN/r/g==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -564,7 +560,7 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>Replace</key>
-				<data>MduKD4TJdQT/w7EKZrr9A+yoIHT7Zrr4A4jI7kj/x4XbdN/D</data>
+				<data>MfaKD4TJdQT/xrEKZrr9A+yoIHT7Zrr4A4jI7kj/x4X2dN/D</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -622,6 +618,8 @@
 			<key>ExtendBTFeatureFlags</key>
 			<false/>
 			<key>ExternalDiskIcons</key>
+			<false/>
+			<key>ForceSecureBootScheme</key>
 			<false/>
 			<key>IncreasePciBarSize</key>
 			<false/>
@@ -748,16 +746,16 @@
 			<dict>
 				<key>Comment</key>
 				<string>OpenShell.efi</string>
-				<key>Name</key>
-				<string>OpenShell.efi</string>
+				<key>Auxiliary</key>
+				<true/>
 				<key>Enabled</key>
 				<true/>
 				<key>Arguments</key>
 				<string></string>
 				<key>Path</key>
 				<string>OpenShell.efi</string>
-				<key>Auxiliary</key>
-				<true/>
+				<key>Name</key>
+				<string>OpenShell.efi</string>
 			</dict>
 		</array>
 	</dict>
@@ -844,6 +842,8 @@
 	<dict>
 		<key>Automatic</key>
 		<true/>
+		<key>CustomMemory</key>
+		<false/>
 		<key>Generic</key>
 		<dict>
 			<key>AdviseWindows</key>
@@ -851,19 +851,19 @@
 			<key>SystemMemoryStatus</key>
 			<string>Auto</string>
 			<key>MLB</key>
-			<string>C02042207GUH69FUE</string>
+			<string>C02029270GULNV91H</string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
-			<data>ESIzRFVm</data>
+			<data>ESIzAAAA</data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemProductName</key>
-			<string>iMac18,1</string>
+			<string>iMac19,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02DKQYVH7JY</string>
+			<string>C02D302WJV3Q</string>
 			<key>SystemUUID</key>
-			<string>F551CD06-29B1-478F-89F8-45AEAFB680B7</string>
+			<string>F83EB1DD-6A20-454D-AECC-B0F16D0BA49A</string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
@@ -943,6 +943,8 @@
 			<key>ConsoleMode</key>
 			<string></string>
 			<key>DirectGopRendering</key>
+			<false/>
+			<key>ForceResolution</key>
 			<false/>
 			<key>IgnoreTextInGraphics</key>
 			<false/>
