@@ -15,6 +15,18 @@ If you change your SMBIOS configuration in your config.plist (SystemProductName,
 * some applications could ask again for their license serial number (like Luminar), but other won't (like PhpStorm)
 * some os settings could be reset to default (like the screensaver and the status bar)
 
+## update
+
+In order to avoid any kind of problem, follow these steps for updating Opencore:
+* backup your current working EFI folder
+* [Adding The Base OpenCore Files](https://dortania.github.io/OpenCore-Install-Guide/installer-guide/opencore-efi.html#adding-the-base-opencore-files)
+* [Gathering files](https://dortania.github.io/OpenCore-Install-Guide/ktext.html#gathering-files)
+* [config.plist Setup](https://dortania.github.io/OpenCore-Install-Guide/config.plist/#config-plist-setup)
+* your specific config.plist setup (example [Desktop Coffee Lake](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#desktop-coffee-lake))
+* apply any custom changes referencing the specific build from the repository
+* testing (beware that this upgrade will trigger the resets mentioned in the above smbios section)
+* deploy
+
 ## tips
 
 Read the Hackintosh guide from [Dortania's OpenCore Install Guide](https://dortania.github.io/OpenCore-Install-Guide/).
