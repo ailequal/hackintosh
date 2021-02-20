@@ -61,7 +61,7 @@
 
 ### opencore
 
-OpenCore 0.6.3 (RELEASE), which means all the debugging features are currenctly disabled.
+OpenCore 0.6.6 (RELEASE), which means all the debugging features are currenctly disabled.
 
 ### config.plist
 
@@ -97,12 +97,12 @@ Right now I am using the following Pre-Built SSDTs. One day maybe I will compile
 
 | Kext                                          | Version  |
 | --------------------------------------------- | -------- |
-| Lilu                                          | 1.4.9    |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.1.8    |
-| AppleALC                                      | 1.5.4    |
-| IntelMausi                                    | 1.0.4    |
+| Lilu                                          | 1.5.1    |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.0    |
+| AppleALC                                      | 1.5.7    |
+| IntelMausi                                    | 1.0.5    |
 | USBMap                                        | iMac19,1 |
-| WhateverGreen                                 | 1.4.4    |
+| WhateverGreen                                 | 1.4.7    |
 
 ### tools
 
@@ -124,4 +124,3 @@ The USBMap.kext is custom made for my specific setup and the iMac19,1 SMBIOS.
 * Overcloking the RAM will create wierd bug issues with the USB when going to sleep.
 * Removing a USB device during sleep will wake the computer.
 * DRM features doesn't really work well with iTunes and Safari.
-

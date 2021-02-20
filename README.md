@@ -13,7 +13,7 @@ If you change your SMBIOS configuration in your config.plist (SystemProductName,
 * you'll need to generate your ssh keys from scratch
 * some applications could reset themselves (like Google Chrome)
 * some applications could ask again for their license serial number (like Luminar), but other won't (like PhpStorm)
-* some os settings could be reset to default (like the screensaver)
+* some os settings could be reset to default (like the screensaver and the status bar)
 
 ## tips
 
