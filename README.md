@@ -10,7 +10,7 @@ Please note that these configurations are customized specifically for my builds 
 
 If you change your SMBIOS configuration in your config.plist (SystemProductName, SystemSerialNumber, MLB, SystemUUID) inside an already installed Hackintosh drive, then beware that your current installation could experience some (little) issues:
 * you'll need to map your USB port from scratch
-* you'll need to enter again your ssh keys' passphrase
+* you'll need to enter again your ssh key passphrase
 * some applications could reset themselves (like Google Chrome)
 * some applications could ask again for their license serial number (like Luminar), but other won't (like PhpStorm)
 * some os settings could be reset to default (like the screensaver and the status bar)
