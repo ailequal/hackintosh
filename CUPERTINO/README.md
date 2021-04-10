@@ -82,7 +82,7 @@ A custom kext for USB mapping is included, so the XhciPortLimit is set to False.
 
 ### acpi
 
-Right now I am using the following Pre-Built SSDTs. One day maybe I will compile them.
+Right now I am using the following Pre-Built SSDTs. One day maybe I will compile them (maybe).
 
 * SSDT-AWAC.aml
 * SSDT-EC-USBX-DESKTOP.aml
@@ -97,11 +97,11 @@ Right now I am using the following Pre-Built SSDTs. One day maybe I will compile
 
 | Kext                                          | Version  |
 | --------------------------------------------- | -------- |
-| Lilu                                          | 1.5.1    |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.0    |
 | AppleALC                                      | 1.5.7    |
 | IntelMausi                                    | 1.0.5    |
+| Lilu                                          | 1.5.1    |
 | USBMap                                        | iMac19,1 |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.0    |
 | WhateverGreen                                 | 1.4.7    |
 
 ### tools

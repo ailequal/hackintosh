@@ -52,7 +52,7 @@
 
 ### opencore
 
-OpenCore 0.6.2 (RELEASE), which means all the debugging features are currenctly disabled.
+OpenCore 0.6.8 (RELEASE), which means all the debugging features are currenctly disabled.
 
 ### config.plist
 
@@ -60,11 +60,11 @@ The SMBIOS is set to iMac19,1.
 
 Double check that SecureBootModel is set to 'Disabled', otherwise you will be stuck in an endless bootloop.
 
-A custom kext for USB mapping is included, so the XhciPortLimit is set to False (soon).
+A custom kext for USB mapping is not (yet) included, so the XhciPortLimit is set to True.
 
 ### acpi
 
-Right now I am using the following Pre-Built SSDTs. I will sooner compile them manually.
+Right now I am using the following Pre-Built SSDTs. One day maybe I will compile them (maybe).
 
 * SSDT-AWAC.aml
 * SSDT-EC-USBX-DESKTOP.aml
@@ -80,13 +80,13 @@ Right now I am using the following Pre-Built SSDTs. I will sooner compile them m
 
 | Kext                                          | Version |
 | --------------------------------------------- | ------- |
-| Lilu                                          | 1.4.8   |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.1.7   |
-| AppleALC                                      | 1.5.3   |
-| IntelMausi                                    | 1.0.4   |
-| NVMeFix                                       | ??      |
+| AppleALC                                      | 1.5.9   |
+| IntelMausi                                    | 1.0.5   |
+| Lilu                                          | 1.5.2   |
+| NVMeFix                                       | 1.0.6   |
 | USBMap                                        | Custom  |
-| WhateverGreen                                 | 1.4.3   |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.2   |
+| WhateverGreen                                 | 1.4.9   |
 
 ### tools
 
@@ -94,18 +94,19 @@ Right now I am using the following Pre-Built SSDTs. I will sooner compile them m
 
 ### usb-mapping
 
-The USBMap.kext is custom made for my specific setup.
+The USBMap.kext is custom made for my specific setup and the iMac19,1 SMBIOS.
 
 ### to do
 
-* Finish the main build.
 * USB mapping.
+* Disable Bluetooth.
 * Create custom SSDTs.
+* Setup rEFInd.
+* Test iCloud login and features.
 
 ### bugs
 
+* The secondary ethernet port isn't working.
 * Overcloking the RAM will create wierd bug issues with the USB when going to sleep.
 * Removing a USB device during sleep will wake the computer.
 * DRM features doesn't really work well with iTunes and Safari.
-
-
