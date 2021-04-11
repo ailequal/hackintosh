@@ -58,9 +58,11 @@ OpenCore 0.6.8 (RELEASE), which means all the debugging features are currenctly 
 
 The SMBIOS is set to iMac19,1.
 
+The USB mapping has excluded the integrated motherboard's bluetooth and wifi features. Also the two red USB ports on the rear of the motherboard are only enabled as USB3.
+
 Double check that SecureBootModel is set to 'Disabled', otherwise you will be stuck in an endless bootloop.
 
-A custom kext for USB mapping is not (yet) included, so the XhciPortLimit is set to True.
+A custom kext for USB mapping is included, so the XhciPortLimit is set to False.
 
 ### acpi
 
@@ -78,15 +80,15 @@ Right now I am using the following Pre-Built SSDTs. One day maybe I will compile
 
 ### kext
 
-| Kext                                          | Version |
-| --------------------------------------------- | ------- |
-| AppleALC                                      | 1.5.9   |
-| IntelMausi                                    | 1.0.5   |
-| Lilu                                          | 1.5.2   |
-| NVMeFix                                       | 1.0.6   |
-| USBMap                                        | Custom  |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.2   |
-| WhateverGreen                                 | 1.4.9   |
+| Kext                                          | Version  |
+| --------------------------------------------- | -------- |
+| AppleALC                                      | 1.5.9    |
+| IntelMausi                                    | 1.0.5    |
+| Lilu                                          | 1.5.2    |
+| NVMeFix                                       | 1.0.6    |
+| USBMap                                        | iMac19,1 |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.2    |
+| WhateverGreen                                 | 1.4.9    |
 
 ### tools
 
@@ -98,8 +100,6 @@ The USBMap.kext is custom made for my specific setup and the iMac19,1 SMBIOS.
 
 ### to do
 
-* USB mapping.
-* Disable Bluetooth.
 * Create custom SSDTs.
 * Setup rEFInd.
 * Test iCloud login and features.
