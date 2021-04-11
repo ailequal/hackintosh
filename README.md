@@ -41,7 +41,7 @@ To map your USB ports use [USBMap](https://github.com/corpnewt/USBMap).
 
 To better explore hardware information use [IORegistryExplorer](https://github.com/vulgo/IORegistryExplorer).
 
-To interact with an EFI partition with macOS, use the following commands.
+To interact with an EFI partition with macOS, use the following commands or just use [MountEFI](https://github.com/corpnewt/MountEFI).
 
 ```bash
 diskutil list
