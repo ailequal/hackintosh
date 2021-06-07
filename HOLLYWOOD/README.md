@@ -58,6 +58,8 @@ OpenCore 0.6.8 (RELEASE), which means all the debugging features are currenctly 
 
 The SMBIOS is set to iMac19,1.
 
+The PlatformInfo data must be manually added, following [this](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) procedure with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
+
 The USB mapping has excluded the integrated motherboard's bluetooth and wifi features. Also the two red USB ports on the rear of the motherboard are only enabled as USB3.
 
 Double check that SecureBootModel is set to 'Disabled', otherwise you will be stuck in an endless bootloop.
