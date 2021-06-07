@@ -61,11 +61,13 @@
 
 ### opencore
 
-OpenCore 0.6.6 (RELEASE), which means all the debugging features are currenctly disabled.
+OpenCore 0.6.9 (RELEASE), which means all the debugging features are currenctly disabled.
 
 ### config.plist
 
 The SMBIOS is set to iMac19,1. I have a few sensors missing with VirtualSMC, but I overall it's working really great, so I don't mind.
+
+The PlatformInfo data must be manually added, following [this](https://dortania.github.io/OpenCore-Install-Guide/config.plist/coffee-lake.html#platforminfo) procedure with [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS).
 
 If you are using the same motherboard without a descrete GPU, you could encounter a bug that will cause the HDMI port to display a purple/violet screen. To fix this weird behavior go under "PciRoot(0x0)/Pci(0x2,0x0)" and add these two extra records.
 
@@ -97,12 +99,12 @@ Right now I am using the following Pre-Built SSDTs. One day maybe I will compile
 
 | Kext                                          | Version  |
 | --------------------------------------------- | -------- |
-| AppleALC                                      | 1.5.7    |
-| IntelMausi                                    | 1.0.5    |
-| Lilu                                          | 1.5.1    |
+| AppleALC                                      | 1.6.0    |
+| IntelMausi                                    | 1.0.6    |
+| Lilu                                          | 1.5.3    |
 | USBMap                                        | iMac19,1 |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.0    |
-| WhateverGreen                                 | 1.4.7    |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.3    |
+| WhateverGreen                                 | 1.4.9    |
 
 ### tools
 
