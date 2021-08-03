@@ -22,6 +22,7 @@
 - iGPU: Intel UHD Graphics 630
 - GPU: Radeon RX 580
 - RAM: Corsair Vengeance LPX DDR4 3000 MHz 8 GB X 4
+- Bluetooth: ASUS USB-BT400 USB 2.0 Bluetooth 4.0 Adapter
 - Storage 1: Samsung 850 EVO 250 GB (macOS 10.14.6)
 - Storage 2: Samsung 840 EVO 250 GB (Windows 10 Build 2004)
 - Storage 3: Seagate 1 TB 7200 RPM
@@ -81,6 +82,8 @@ The AppleALC kext is present inside the configuration, but it's disabled, since 
 Double check that SecureBootModel is set to 'Disabled', otherwise you will be stuck in an endless bootloop.
 
 A custom kext for USB mapping is included, so the XhciPortLimit is set to False.
+
+The bluetooth usb dongle works natively.
 
 ### acpi
 
