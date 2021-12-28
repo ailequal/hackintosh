@@ -62,7 +62,7 @@
 
 ### opencore
 
-OpenCore 0.6.9 (RELEASE), which means all the debugging features are currenctly disabled.
+OpenCore 0.7.6 (RELEASE), which means all the debugging features are currenctly disabled.
 
 ### config.plist
 
@@ -102,12 +102,12 @@ Right now I am using the following Pre-Built SSDTs. One day maybe I will compile
 
 | Kext                                          | Version  |
 | --------------------------------------------- | -------- |
-| AppleALC                                      | 1.6.0    |
-| IntelMausi                                    | 1.0.6    |
-| Lilu                                          | 1.5.3    |
+| AppleALC                                      | 1.6.7    |
+| IntelMausi                                    | 1.0.7    |
+| Lilu                                          | 1.5.8    |
 | USBMap                                        | iMac19,1 |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.3    |
-| WhateverGreen                                 | 1.4.9    |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.8    |
+| WhateverGreen                                 | 1.5.5    |
 
 ### tools
 
