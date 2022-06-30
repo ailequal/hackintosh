@@ -63,6 +63,7 @@
 ### opencore
 
 OpenCore 0.8.1 (RELEASE), which means all the debugging features are currenctly disabled.
+This configuration works with macOS 12.4.
 
 ### config.plist
 
@@ -83,7 +84,7 @@ If you are running into trouble during the boot process, try to set the SecureBo
 
 A custom kext for USB mapping is included, so the XhciPortLimit is set to False.
 
-The bluetooth usb dongle works natively.
+The bluetooth usb dongle works natively up until macOS 11. Starting from macOS 12 it seems that the extra kext "BlueToolFixup" is needed (not included in this configuration).
 
 ### acpi
 
