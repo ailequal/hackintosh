@@ -23,8 +23,8 @@
 - GPU: Radeon RX 580
 - RAM: Corsair Vengeance LPX DDR4 3000 MHz 8 GB X 4
 - Bluetooth: ASUS USB-BT400 USB 2.0 Bluetooth 4.0 Adapter
-- Storage 1: Samsung 850 EVO 250 GB (macOS 10.14.6)
-- Storage 2: Samsung 840 EVO 250 GB (Windows 10 Build 2004)
+- Storage 1: Samsung 850 EVO 250 GB
+- Storage 2: Samsung 840 EVO 250 GB
 - Storage 3: Seagate 1 TB 7200 RPM
 - PSU: EVGA SuperNOVA 750 G3
 - Rear Fan: Noctua NF-P12 Redux-1700 PWM
@@ -62,7 +62,7 @@
 
 ### opencore
 
-OpenCore 0.7.6 (RELEASE), which means all the debugging features are currenctly disabled.
+OpenCore 0.8.1 (RELEASE), which means all the debugging features are currenctly disabled.
 
 ### config.plist
 
@@ -79,7 +79,7 @@ If you are using the same motherboard without a descrete GPU, you could encounte
 
 The AppleALC kext is present inside the configuration, but it's disabled, since I am using an external audio interface through USB (that's why there is no specific boot flag for it).
 
-Double check that SecureBootModel is set to 'Disabled', otherwise you will be stuck in an endless bootloop.
+If you are running into trouble during the boot process, try to set the SecureBootModel to 'Disabled'.
 
 A custom kext for USB mapping is included, so the XhciPortLimit is set to False.
 
@@ -102,12 +102,12 @@ Right now I am using the following Pre-Built SSDTs. One day maybe I will compile
 
 | Kext                                          | Version  |
 | --------------------------------------------- | -------- |
-| AppleALC                                      | 1.6.7    |
+| AppleALC                                      | 1.7.2    |
 | IntelMausi                                    | 1.0.7    |
-| Lilu                                          | 1.5.8    |
+| Lilu                                          | 1.6.0    |
 | USBMap                                        | iMac19,1 |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.8    |
-| WhateverGreen                                 | 1.5.5    |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.9    |
+| WhateverGreen                                 | 1.5.9    |
 
 ### tools
 
