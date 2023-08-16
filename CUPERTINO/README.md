@@ -21,9 +21,10 @@
 - CPU Cooler: Cooler Master Hyper H412R
 - iGPU: Intel UHD Graphics 630
 - GPU: Radeon RX 580
+- Audio interface: Focusrite Scarlett Solo 3rd Gen
 - RAM: Corsair Vengeance LPX DDR4 3000 MHz 8 GB X 4
 - Bluetooth: ASUS USB-BT400 USB 2.0 Bluetooth 4.0 Adapter
-- Storage 1: Samsung 850 EVO 250 GB
+- Storage 1: Lexar NS100 256 GB
 - Storage 2: Samsung 840 EVO 250 GB
 - Storage 3: Seagate 1 TB 7200 RPM
 - PSU: EVGA SuperNOVA 750 G3
@@ -62,8 +63,8 @@
 
 ### opencore
 
-OpenCore 0.8.1 (RELEASE), which means all the debugging features are currenctly disabled.
-This configuration works with macOS 12.4.
+OpenCore 0.9.4 (RELEASE), which means all the debugging features are currenctly disabled.
+This configuration works with macOS 12.6.8.
 
 ### config.plist
 
@@ -86,6 +87,8 @@ A custom kext for USB mapping is included, so the XhciPortLimit is set to False.
 
 The bluetooth usb dongle works natively up until macOS 11. Starting from macOS 12 it seems that the extra kext "BlueToolFixup" is needed (not included in this configuration).
 
+If the GPU temperature is not detected by macOS, checkout [NootInc/RadeonSensor](https://github.com/NootInc/RadeonSensor).
+
 ### acpi
 
 Right now I am using the following Pre-Built SSDTs. One day maybe I will compile them (maybe).
@@ -103,12 +106,12 @@ Right now I am using the following Pre-Built SSDTs. One day maybe I will compile
 
 | Kext                                          | Version  |
 | --------------------------------------------- | -------- |
-| AppleALC                                      | 1.7.2    |
+| AppleALC                                      | 1.8.4    |
 | IntelMausi                                    | 1.0.7    |
-| Lilu                                          | 1.6.0    |
+| Lilu                                          | 1.6.7    |
 | USBMap                                        | iMac19,1 |
-| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.2.9    |
-| WhateverGreen                                 | 1.5.9    |
+| VirtualSMC (with SMCProcessor and SMCSuperIO) | 1.3.2    |
+| WhateverGreen                                 | 1.6.6    |
 
 ### tools
 
